@@ -1,0 +1,68 @@
+/**
+ * The contents of this file are subject to the license and copyright
+ * detailed in the LICENSE and NOTICE files at the root of the source
+ * tree and available online at
+ *
+ * http://www.dspace.org/license/
+ */
+
+/**
+ * You can put your own style in this file.
+ * It will be included in all color schemes
+ */
+
+//example mixin to set the text-selection style
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
+@include selection {
+    color: white;
+    background: hotpink;
+}
+
+body {
+    background-color: $almost-white;
+}
+
+.navbar {
+    min-height: 75px;
+}
+
+header .navbar-default {
+    border-top: 5px solid $milligan-orange; 
+}
+
+header .navbar-brand img {
+    height: 40px;
+}
+
+.main-content {
+    background-color: $almost-white;
+}
+
+.trail-wrapper {
+    background-color: #262626;
+    border-bottom: 1px solid #262626;
+
+    .breadcrumb {
+        > li {
+	    color: #fff;
+	    + li:before {
+		color: #fff;
+	    }
+	}
+	> .active {
+	    color: #fff;
+	}
+    }
+}
+	
+.page-header {
+    border-bottom: 1px solid $almost-white;
+}
+
+footer .pull-right {
+    display: none;
+}
