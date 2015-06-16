@@ -19,10 +19,16 @@
 
 @include selection {
     color: white;
-    background: hotpink;
+    background: $milligan-orange;
 }
 
+
+$orange-gray: #afa79f;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body {
+    font-family: "Open Sans", sans-serif;
     background-color: $almost-white;
 }
 
@@ -31,11 +37,34 @@ body {
 }
 
 header .navbar-default {
-    border-top: 5px solid $milligan-orange; 
+    border-top: 10px solid $milligan-orange; 
 }
 
 header .navbar-brand img {
-    height: 40px;
+    height: 24px;
+    margin-left: -5px;
+    margin-top: -2px;
+
+    @media (min-width: $screen-xs-min) {
+        height: 39px;
+    }
+    
+    @media (min-width: $screen-md-min) {
+        height: 49px;
+        margin-top: 0;
+    }
+}
+
+header .navbar {
+    min-height: 40px;
+
+    @media (min-width: $screen-xs-min) {
+        min-height: 75px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        min-height: 90px;
+    }
 }
 
 .main-content {
@@ -56,6 +85,16 @@ header .navbar-brand img {
 	> .active {
 	    color: #fff;
 	}
+        a { 
+            color: #000;
+        
+            @media (min-width: $screen-sm-min) {
+                color: #fff;
+            }
+        } 
+        .dropdown-toggle {
+            color: #fff;
+        }
     }
 }
 
@@ -69,4 +108,22 @@ header .navbar-brand img {
 
 footer .pull-right {
     display: none;
+}
+
+.btn-primary {
+    background-color: $orange-gray;
+    border-color: $orange-gray;
+    &:hover {
+        background-color: $milligan-orange;
+    }
+}
+
+.list-group-item.active, .list-group-item.active:hover {
+    background-color: $orange-gray;
+    border-color: $orange-gray;
+    color: black;
+}
+
+header .navbar-default .navbar-toggle:hover {
+    background-color: $milligan-orange;
 }
