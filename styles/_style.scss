@@ -25,7 +25,7 @@
 
 $orange-gray: #afa79f;
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -126,4 +126,8 @@ footer .pull-right {
 
 header .navbar-default .navbar-toggle:hover {
     background-color: $milligan-orange;
+}
+
+#sidemenu {
+    margin-top: 2em;
 }
