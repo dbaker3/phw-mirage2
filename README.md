@@ -7,6 +7,7 @@ The resulting directory structure should appear as:
   + themes
     - phw-mirage2
       + images
+      + scripts
       + styles
 
 You must also enable the theme in the `<themes>` section of `[dspace_source]/dspace/config/xmlui.xconf` by adding:
