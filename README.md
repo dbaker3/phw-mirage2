@@ -9,6 +9,7 @@ The resulting directory structure should appear as:
       + images
       + scripts
       + styles
+      + xsl
 
 You must also enable the theme in the `<themes>` section of `[dspace_source]/dspace/config/xmlui.xconf` by adding:
   ```xml
