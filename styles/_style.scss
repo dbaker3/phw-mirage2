@@ -128,6 +128,14 @@ header .navbar-default .navbar-toggle:hover {
     background-color: $milligan-orange;
 }
 
-#sidemenu {
-    padding-top: 20px;
+#home-menu {
+  padding-left: 0;
+  list-style: none;
+  font-size: 125%;
+}
+
+#adv-search-link {
+  display: block;
+  text-align: right;
+
 }

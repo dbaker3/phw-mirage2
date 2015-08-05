@@ -275,6 +275,18 @@
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
                     </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/contribute')">
+                        <xsl:text>Contribute</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/policy')">
+                        <xsl:text>MCStor Policies</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/faq')">
+                        <xsl:text>FAQ</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/contact')">
+                        <xsl:text>Contact</xsl:text>
+                    </xsl:when>
                     <xsl:when test="not($page_title)">
                         <xsl:text>  </xsl:text>
                     </xsl:when>
@@ -765,10 +777,25 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
-                <xsl:when test="starts-with($request-uri, 'page/about')">
+                <xsl:when test="starts-with($request-uri, 'page/contribute')">
                     <div class="hero-unit">
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
+                        <h1>Contribute</h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
+                    </div>
+                </xsl:when>
+                <xsl:when test="starts-with($request-uri, 'page/policy')">
+                    <div>
+                        <h1>MCStor Policies</h1>
+                    </div>
+                </xsl:when>
+                <xsl:when test="starts-with($request-uri, 'page/faq')">
+                    <div>
+                        <h1>FAQ</h1>
+                    </div>
+                </xsl:when>
+                <xsl:when test="starts-with($request-uri, 'page/contact')">
+                    <div>
+                        <h1>Contact</h1>
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
