@@ -23,6 +23,12 @@
     field template handle the rest.
 -->
 
+<!--
+
+    8/5/15 dabaker - Added trails for custom content pages for Contribute, Policies, FAQ, and Contact
+
+-->
+
 <xsl:stylesheet
                 xmlns="http://di.tamu.edu/DRI/1.0/"
                 xmlns:dri="http://di.tamu.edu/DRI/1.0/"
@@ -112,6 +118,8 @@
             </trail>
         </pageMeta>
     </xsl:template>
+
+    <!-- dabaker - Added trails for custom pages -->
 
     <xsl:template match="dri:pageMeta[dri:metadata[@element = 'request'][@qualifier = 'URI']/text() = 'page/contribute']">
         <pageMeta>

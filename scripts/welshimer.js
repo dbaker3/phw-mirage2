@@ -1,4 +1,3 @@
-
 // MCStor homepage
 if (window.location.pathname == "/") {
     $('#home-search').after($('#ds-search-option'));
@@ -15,3 +14,4 @@ $('#ds-search-option form').after('<a href="/discover" id="adv-search-link">Adva
     });
     $('#ds-options').hide();
 }*/
+

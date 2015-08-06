@@ -20,6 +20,13 @@
 
 -->
 
+<!--
+
+    8/5/15 dabaker - Added titles and page content for custom pages
+           dabaker - Customize footer
+
+-->
+
 <xsl:stylesheet xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 xmlns:dri="http://di.tamu.edu/DRI/1.0/"
                 xmlns:mets="http://www.loc.gov/METS/"
@@ -275,6 +282,7 @@
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
                     </xsl:when>
+                    <!-- dabaker - custom content pages titles -->
                     <xsl:when test="starts-with($request-uri, 'page/contribute')">
                         <xsl:text>Contribute</xsl:text>
                     </xsl:when>
@@ -707,10 +715,11 @@
                 <div class="row">
                     <hr/>
                     <div class="col-xs-7 col-sm-8">
-                        <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
+                        <div> <!-- dabaker - Customize footer -->
+                            <p><img id="mc-wordmark" src="/themes/phw-mirage2/images/milligan.png" alt="Milligan" /></p>
+                            <p>&#169;2014 Milligan College. All Rights Reserved.</p>
                         </div>
-                        <div class="hidden-print">
+                        <!--<div class="hidden-print">
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
@@ -737,7 +746,7 @@
                             <a title="@mire NV" target="_blank" href="http://atmire.com">
                                 <img alt="@mire NV" src="{concat($theme-path, '/images/@mirelogo-small.png')}"/>
                             </a>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -777,21 +786,15 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+                <!-- dabaker - Page content for custom content pages -->
                 <xsl:when test="starts-with($request-uri, 'page/contribute')">
-                    <div class="hero-unit">
-                        <h1>Contribute</h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
-                    </div>
+                    <xsl:copy-of select="document('../../../../static/contribute.xhtml')"/> 
                 </xsl:when>
                 <xsl:when test="starts-with($request-uri, 'page/policy')">
-                    <div>
-                        <h1>MCStor Policies</h1>
-                    </div>
+                    <xsl:copy-of select="document('../../../../static/policy.xhtml')"/> 
                 </xsl:when>
                 <xsl:when test="starts-with($request-uri, 'page/faq')">
-                    <div>
-                        <h1>FAQ</h1>
-                    </div>
+                    <xsl:copy-of select="document('../../../../static/faq.xhtml')"/> 
                 </xsl:when>
                 <xsl:when test="starts-with($request-uri, 'page/contact')">
                     <div>
