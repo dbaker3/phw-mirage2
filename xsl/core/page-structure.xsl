@@ -22,8 +22,10 @@
 
 <!--
 
-    8/5/15 dabaker - Added titles and page content for custom pages
-           dabaker - Customize footer
+    08/05/15 dabaker - Added titles and page content for custom pages
+             dabaker - Customize footer
+    09/15/15 dabaker - Added link to Library homepage
+	     dabaker - Changed login link to default to LDAP
 
 -->
 
@@ -419,9 +421,8 @@
                                     </li>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <li>
-                                        <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
+                                    <li> <!-- dabaker - 9/16/15 - changed mobile login button to default to ldap -->
+                                        <form style="display: inline" action="https://mcstor.library.milligan.edu/ldap-login" method="get">
                                             <button class="navbar-toggle navbar-link">
                                             <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
                                             </button>
@@ -435,6 +436,12 @@
 
                     <div class="navbar-header pull-right hidden-xs">
                         <ul class="nav navbar-nav pull-left">
+                              <!-- dabaker 9/16/15 - Library home link -->
+                              <li>
+                                  <a href="https://library.milligan.edu/">
+                                      <span class="hidden-xs">Library Home</span>
+                                  </a>
+                              </li>
                               <xsl:call-template name="languageSelection"/>
                         </ul>
                         <ul class="nav navbar-nav pull-left">
@@ -472,8 +479,8 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}">
+                                        <!-- dabaker - 9/16/15 - Changed default login to ldap login url -->
+                                        <a href="https://mcstor.library.milligan.edu/ldap-login">
                                             <span class="hidden-xs">
                                                 <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                             </span>

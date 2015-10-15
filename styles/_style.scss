@@ -139,8 +139,19 @@ header .navbar-default .navbar-toggle:hover {
   text-align: right;
 }
 
+.home-image {
+    width: 100%; 
+    margin: 12px 0px; 
+    border: 10px solid #fff;
+    @include box-shadow: #ccc 0 0 10px;
+    @media (min-width: $screen-xs-min) {
+        display:none;
+    }
+}
+
 footer {
   #mc-wordmark {
     width: 19.4em;
   }
 }
+

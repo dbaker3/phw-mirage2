@@ -2,6 +2,7 @@
 if (window.location.pathname == "/") {
     $('#home-search').after($('#ds-search-option'));
     $('#ds-search-option').css('max-width', '500px');
+    $('#home-search').before($('.home-image'));
 }
 
 $('#ds-search-option form').after('<a href="/discover" id="adv-search-link">Advanced Search</a>');
