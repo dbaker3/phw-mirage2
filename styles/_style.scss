@@ -143,8 +143,10 @@ header .navbar-default .navbar-toggle:hover {
     width: 100%; 
     margin: 12px 0px; 
     border: 10px solid #fff;
-    @include box-shadow: #ccc 0 0 10px;
-    @media (min-width: $screen-xs-min) {
+    box-shadow: #ccc 0 0 10px;
+    -moz-box-shadow: #ccc 0 0 10px;
+    -webkit-box-shadow: #ccc 0 0 10px;
+    @media (max-width: $screen-xs-min) {
         display:none;
     }
 }

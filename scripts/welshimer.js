@@ -5,6 +5,8 @@ if (window.location.pathname == "/") {
     $('#home-search').before($('.home-image'));
 }
 
+if (window.location.pathname == "/login") { window.location.replace("/ldap-login"); }
+
 $('#ds-search-option form').after('<a href="/discover" id="adv-search-link">Advanced Search</a>');
 
 // Pages defined in xsl/core/page-structure.xsl
